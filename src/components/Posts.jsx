@@ -46,9 +46,11 @@ const Posts = () => {
     const [posts, setPosts] = useState(MEHDI_POSTS)
   return (
     <section className='posts'>
+        <container className="posts_container">
         {
-            posts.map(({id, thumbnail, category, title, description, authorID}) => <PostItem key={id} postID={id} thumbnail={thumbnail} category={category} title={title} description={description} authorID={authorID}/>)
+            posts.map(({id, thumbnail, category, title, desc, authorID}) => <PostItem key={id} postID={id} thumbnail={thumbnail} category={category} title={title} description={desc} authorID={authorID}/>)
         }
+        </container>
     </section>
   )
 }
