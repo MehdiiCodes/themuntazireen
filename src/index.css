@@ -286,3 +286,36 @@ footer {
     border-radius: var(--radius-2);
     overflow: hidden;
 }
+
+
+
+/* ------------------------ Post Detail--------------------------------------- */
+.post-detail {
+    width: var(--form-width);
+    background: var(--color-white);
+    margin-inline: auto;
+    padding: 2rem 0;
+}
+
+.post-detail_header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.post-detail_buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.post-detail_thumbnail {
+    margin: 1rem 0;
+    height: fit-content;
+    max-height: 30rem;
+    overflow: hidden;
+}
+
+.post-detail p {
+    margin-bottom: 0.7rem;
+}
