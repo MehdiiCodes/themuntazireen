@@ -13,7 +13,7 @@ const Header = () => {
         { <img src={Logo} alt="The Muntazireen" />}
         </Link>
         <ul className='nav_menu'>
-          <li><Link to="/profile">Akbar Mehdi</Link></li>
+          <li><Link to="/profile/sdfsdf">Akbar Mehdi</Link></li>
           <li><Link to="/create">Create Post</Link></li>
           <li><Link to="/authors">Authors</Link></li>
           <li><Link to="/logout">Logout</Link></li>
