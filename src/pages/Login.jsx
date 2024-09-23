@@ -24,7 +24,7 @@ const Login = () => {
 
           <input type="password"  placeholder='Password' name='password' value={userData.password} onChange={changeInputHandle}/>
 
-          <button className="submit" className='btn primary'>Login</button>
+          <button type="submit" className='btn primary'>Login</button>
         </form>
         <small>Don't have an account? <Link to="/register">sign up</Link></small>
       </div>

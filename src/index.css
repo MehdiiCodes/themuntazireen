@@ -367,6 +367,13 @@ input, select, textarea {
     color: var(--color-primary);
 }
 
+/*  custom style for react quill */
+.ql-editor {
+    overflow: scroll;
+    background: var(--color-white);
+    height: 10rem !important; 
+}
+
 /* ------------------------AUTHORS--------------------------- */
 
 .authors_container {
@@ -460,8 +467,162 @@ input, select, textarea {
     margin-top: 1.5rem;
 }
 
-.profile .profile_from {
+.form .profile_form {
     margin-top: 3rem;
     margin-inline: auto;
     width: var(--form-width);
+}
+
+
+
+/* ----------------------------- DASHBOARD ------------------------------------- */
+
+.dashboard_container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.dashboard_post {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background: var(--color-white);
+    padding: 0.5rem 1.2rem;
+    border-radius: var(--radius-3);
+}
+
+.dashboard_container-info {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    align-items: center;
+}
+
+.dashboard_post-thumbnail {
+    width: 4rem;
+    border-radius: var(--radius-1);
+    overflow: hidden;
+}
+
+.dashboard_post-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+
+/* ============== media quiriies (small devieces)-=============================== */
+
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        width: var(--container-width-md);
+    }
+
+    /* NAVBAR */
+    .nav_container {
+        position: relative;
+    }
+
+    .nav_menu {
+        position: absolute;
+        top: 5rem;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .nav_menu li {
+        width: 100%;
+        box-shadow: -2rem 4rem 4rem  rgba(0, 0, 0, 0.26);
+        animation: dropDown 500ms ease forwards;
+        opacity: 0;
+        transform: rotateX(90deg);
+        transform-origin: top;
+    }
+
+    @keyframes dropDown {
+        to {
+            opacity: 1;
+            transform: rotateX(0);
+        }
+    }
+
+    .nav_menu li:nth-child(2){
+        animation-delay: 300ms;
+    }
+
+    .nav_menu li:nth-child(3){
+        animation-delay: 600ms;
+    }
+
+    .nav_menu li:nth-child(4){
+        animation-delay: 900ms;
+    }
+
+    .nav_menu li a {
+        display: block;
+        background: var(--color-white);
+        padding: 0.85rem 2.5rem;
+    }
+
+    .nav_toggle-btn {
+        display: inline-block;
+        background: transparent;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .posts_container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .footer_categories {
+        flex-direction: column;
+    }
+
+    .post-detail {
+        width: 100%;
+        background: transparent;
+        padding: 1rem;
+    }
+
+    .register, .login, .create-post {
+        width: 100%;
+    }
+
+    .form.profile_from {
+        margin-top: 2.5rem;
+        width: 100%;
+    }
+
+    .authors_container {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    .dashboard_post {
+        flex-direction: column;
+    } 
+
+    .dashboard_post-info {
+        gap: 1.5rem;
+    }
+
+    .dashboard_post-thumbnail {
+        width: 5rem;
+    }
 }
